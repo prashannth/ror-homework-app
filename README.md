@@ -1,8 +1,21 @@
-# Homework Management App
+# Homework management app
 
-This repository contains a Homework management application including basic authentication.
+A rails and angular based homework management app for students and teacher.
 
-# To Run the application
+Rails for back end and Angular for front end.
+
+
+## Implemented user stories
+
+1. Homework contains a title, a question and a due date.
+2. Teacher can assign a homework to multiple students.
+3. Student can see all assigned homework.
+4. Student can submit a homework multiple times before the due date.
+5. Teacher can see a list of latest submissions for a homework.
+6. Teacher can see all submission versions for a student for a homework
+
+
+## Running application
 
 Make sure you have Ruby (2.2 or above) and Bundler installed.
 
@@ -25,4 +38,4 @@ Open your web browser and go to http://localhost:3000
 
 You can log in as a teacher by using 'teacher' as the username and log in as a student by using 'student' as the username.
 
-Good Luck!
+Have fun!

@@ -3,5 +3,26 @@
     Homework
   <% end %>
 <% end %>
+<div ng-app="components">
+  <div id="alert-area">
+  </div>
+  <div ng-controller="hwController">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#homeworks" aria-controls="question" role="tab" data-toggle="tab">Homeworks</a></li>
+      <li role="presentation" class=""><a href="#homework-form" aria-controls="question" role="tab" data-toggle="tab" ng-if="currentUserIs('teacher')">Add Homework</a></li>
 
-<p class="lead">Find me in app/views/welcome/index.html.erb</p>
+      <li role="presentation" class=""><a href="#users" aria-controls="question" role="tab" data-toggle="tab" ng-if="currentUserIs('teacher')">Users</a></li>
+    </ul>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="homeworks">
+        <div homework-list></div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="homework-form">
+        <div homework-form ng-if="currentUserIs('teacher')"></div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="users">
+        <div user-list ng-if="currentUserIs('teacher')"></div>
+      </div>
+    </div>
+  </div>
+</div>

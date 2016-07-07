@@ -1,0 +1,10 @@
+<table class="table table-striped">
+  <tr><th>Title</th><th>Due Date</th><th>Created</th></tr>
+  <tr ng-repeat="(key, homework) in homeworks">
+    <td>
+      <div homework-modal homework="homework"></div>
+    </td>
+    <td>{{ homework.due |  date:'medium' }}</td>
+    <td>{{ homework.created_at  |  date:'medium' }}</td>
+  </tr>
+</table>
